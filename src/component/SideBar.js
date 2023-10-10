@@ -19,7 +19,11 @@ const SideBar = () => {
       <div className="sideBar_item">
         <Link to="/eventDetails">
           {" "}
-          <img style={{ width: "16px", color: "white" }} src={event} alt="img" />{" "}
+          <img
+            style={{ width: "16px", color: "white" }}
+            src={event}
+            alt="img"
+          />{" "}
           EventDetails
         </Link>
       </div>
