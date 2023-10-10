@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
+import Router from "./routes/route/Router";
+import SideBar from "./component/SideBar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main_app_container d-flex">
+      <div className="sideBar_main_container left_container">
+        <SideBar />
+      </div>
+      <div className="right_container my-5">
+        <Router />
+      </div>
     </div>
   );
 }
