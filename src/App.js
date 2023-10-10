@@ -8,7 +8,7 @@ function App() {
       <div className="sideBar_main_container left_container">
         <SideBar />
       </div>
-      <div className="right_container my-5">
+      <div className="right_container container my-5">
         <Router />
       </div>
     </div>

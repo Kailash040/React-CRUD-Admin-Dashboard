@@ -14,3 +14,24 @@ color:white;
     height: 100vh;
     padding: 20px;
 }
+.dashboard_container{
+    width: 100%;
+    background-color: #270F33;
+    color: white;
+    padding: 20px;
+    border-radius: 08px;
+
+}
+.events_container_main :first-child{
+    font-size: 16px;
+    font-weight: 500;
+}
+.events_container_main :last-child{
+    font-size: 24px;
+    background: #FBD07A;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
