@@ -1,7 +1,7 @@
 import React from "react";
 import Vector from "../assests/Vector.png";
 import { Link } from "react-router-dom";
-import data from "../Data/Data";
+import eventData from "../Data/Data";
 const EventList = () => {
   return (
     <div className="eventlist_container ">
@@ -25,7 +25,7 @@ const EventList = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((data, id) => {
+          {eventData.map((data, id) => {
             return (
               <tr key={id}>
                 <td>{data.eventName}</td>

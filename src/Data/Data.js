@@ -1,4 +1,4 @@
-const data = [
+const eventData = [
     {
         eventName:"paradox event",
         title:"jadugar",
@@ -43,4 +43,4 @@ const data = [
         eventData:"28-8-2012"
     }
 ]
-export default data
+export default eventData

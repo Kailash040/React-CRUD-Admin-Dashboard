@@ -1,6 +1,7 @@
 import mobile_image from "../assests/desktop_image.png";
 import Vector from "../assests/Vector.png";
 import {useState,useEffect} from "react"
+import eventData from "../Data/Data";
 const AddEvent = () => {
   const [data,setData] =useState({
     eventName:"",
@@ -10,10 +11,10 @@ const AddEvent = () => {
     price:"",
     eventDate:"",
 })
-console.log(data.eventName)
+
   return (
     <div>
-      <form className="container">
+      <form className="container" >
         <div className="dashboard_container ">
           <img src={Vector} alt="img" /> &nbsp;&nbsp;<span>DashBoard</span>
         </div>
@@ -69,7 +70,7 @@ console.log(data.eventName)
           <label for="eventLink" class="form-label">
             Event Link
           </label>
-          <input type="url" class="form-control" value={data.eventLink}   onChange={(e)=>setData({...data,eventLink:e.target.value})} id="eventLink" />
+          <input type="email" class="form-control" value={data.eventLink}   onChange={(e)=>setData({...data,eventLink:e.target.value})} id="eventLink" />
         </div>
         <div className="row">
           <div class="mb-3 col">
