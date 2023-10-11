@@ -11,7 +11,7 @@ const SideBar = () => {
         <img src={admin_logo} alt="img" />{" "}
       </div>
       <div className="sideBar_item">
-        <Link to="/eventlist">
+        <Link to="/">
           {" "}
           <img style={{ width: "16px" }} src={event} alt="img" /> Events
         </Link>

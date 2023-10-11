@@ -7,7 +7,7 @@ const Router = () => {
   return (
     <div>
        <Routes>
-      <Route path="/eventList" element={<EventList />} />
+      <Route path="/" element={<EventList />} />
       <Route path="/eventDetails" element={<EventDetails />} />
       <Route path="/addEvent" element={<AddEvent />} />
 
