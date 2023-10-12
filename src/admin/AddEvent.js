@@ -1,6 +1,7 @@
 import mobile_image from "../assests/desktop_image.png";
 import Vector from "../assests/Vector.png";
 import {useState,useEffect} from "react"
+import axios from "axios";
 import eventData from "../Data/Data";
 const AddEvent = () => {
   const [data,setData] =useState({
@@ -12,9 +13,31 @@ const AddEvent = () => {
     eventDate:"",
 })
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+ 
+  fetch("../Data/Data", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("New post added:", data);
+      // Reset form fields
+     
+    })
+    .catch((error) => {
+      console.error("Error adding new post:", error);
+    });
+};
+
   return (
     <div>
-      <form className="container" >
+      <form className="container" onSubmit={handleSubmit} >
         <div className="dashboard_container ">
           <img src={Vector} alt="img" /> &nbsp;&nbsp;<span>DashBoard</span>
         </div>
