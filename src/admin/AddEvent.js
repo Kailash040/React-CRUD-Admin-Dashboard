@@ -1,8 +1,9 @@
-import mobile_image from "../assests/desktop_image.png";
+import mobile_image from "../assests/mobile_image.png";
 import Vector from "../assests/Vector.png";
 import {useState,useEffect} from "react"
 import axios from "axios";
 import eventData from "../Data/Data";
+import Data from '../Data/Data'
 const AddEvent = () => {
   const [data,setData] =useState({
     eventName:"",
@@ -17,7 +18,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
 
  
-  fetch("../Data/Data", {
+  fetch(Data, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
