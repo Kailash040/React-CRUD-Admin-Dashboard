@@ -28,14 +28,14 @@ const EventList = () => {
           {eventData.map((data, id) => {
             return (
               <tr key={id}>
-                <td>{data.eventName}</td>
+                <td>{data.name}</td>
 
                 <td>{data.title}</td>
                 <td>{data.price}</td>
-                <td>{data.eventData}</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>{data.eventDate}</td>
+                <td>Details</td>
+                <td>Edit</td>
+                <td>Delete</td>
               </tr>
             );
           })}
