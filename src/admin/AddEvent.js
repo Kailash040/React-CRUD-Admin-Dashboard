@@ -5,6 +5,8 @@ import axios from "axios";
 import eventData from "../Data/Data";
 import Data from '../Data/Data'
 const AddEvent = () => {
+  const  [list,setList] =useState([]);
+  
   const [data,setData] =useState({
     eventName:"",
     title:"",
@@ -18,22 +20,22 @@ const handleSubmit = (event) => {
   event.preventDefault();
 
  
-  fetch("http://localhost:3000/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("New post added:", data);
-      // Reset form fields
+  // fetch("http://localhost:3000/", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(data),
+  // })
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log("New post added:", data);
+  //     // Reset form fields
      
-    })
-    .catch((error) => {
-      console.error("Error adding new post:", error);
-    });
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error adding new post:", error);
+  //   });
 };
 
   return (
