@@ -29,7 +29,7 @@ console.log(list)
           <img src={Vector} alt="img" /> &nbsp;&nbsp;<span>DashBoard</span>
         </div>
         <h5 className="my-5">Add Event</h5>
-        <div className="row">
+        {/* <div className="row">
           <label for="" class="form-label">
             Upload Main Image
           </label>
@@ -51,14 +51,14 @@ console.log(list)
               </div>
             </label>
           </div>
-        </div>
+        </div> */}
         <div class="mb-3">
           <label for="" class="form-label">
             Event Name
           </label>
-          <input type="name" class="form-control" value={data.eventName} onChange={(e)=>setData({...data,eventName:e.target.value})} id="" />
+          <input type="name" class="form-control" value={data.eventName} onChange={(e)=>setData({...data,eventName:e.target.value})} />
         </div>
-        <div class="mb-3">
+        {/* <div class="mb-3">
           <label for="title" class="form-label">
             Title
           </label>
@@ -103,7 +103,7 @@ console.log(list)
               onChange={(e)=>setData({...data,eventDate:e.target.value})}
             />
           </div>
-        </div>
+        </div> */}
         <button
           type="submit"
           class="btn  col-2 p-2 text-light"
