@@ -18,26 +18,10 @@ const AddEvent = () => {
 
 const handleSubmit = (event) => {
   event.preventDefault();
+// 
 
- 
-  // fetch("http://localhost:3000/", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify(data),
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log("New post added:", data);
-  //     // Reset form fields
-     
-  //   })
-  //   .catch((error) => {
-  //     console.error("Error adding new post:", error);
-  //   });
 };
-
+console.log(list)
   return (
     <div>
       <form className="container" onSubmit={handleSubmit} >
