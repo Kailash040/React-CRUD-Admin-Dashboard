@@ -58,7 +58,7 @@ console.log(list)
           </label>
           <input type="name" class="form-control" value={data.eventName} onChange={(e)=>setData({...data,eventName:e.target.value})} />
         </div>
-        {/* <div class="mb-3">
+        <div class="mb-3">
           <label for="title" class="form-label">
             Title
           </label>
@@ -103,7 +103,7 @@ console.log(list)
               onChange={(e)=>setData({...data,eventDate:e.target.value})}
             />
           </div>
-        </div> */}
+        </div>
         <button
           type="submit"
           class="btn  col-2 p-2 text-light"
