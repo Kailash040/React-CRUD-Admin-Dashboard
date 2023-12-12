@@ -4,24 +4,30 @@ import {useState,useEffect} from "react"
 import axios from "axios";
 import eventData from "../Data/Data";
 import Data from '../Data/Data'
+import { errorToJSON } from "next/dist/server/render";
 const AddEvent = () => {
   const  [list,setList] =useState([]);
   
-  const [data,setData] =useState({
-    eventName:"",
-    title:"",
-    shortDescription:"",
-    eventLink:"",
-    price:"",
-    eventDate:"",
-})
+  const [data,setData] =useState("")
 
 const handleSubmit = (event) => {
   event.preventDefault();
 // 
-
+if(list !== ""){
+  setList([...list,{id:data.length +1, text:list.trim()}])
+}
+setData("");
 };
-console.log(list)
+  // useEffect to run once the component mounts
+  useEffect(() => {
+    // localstorage only support storing strings as keys and values
+    // - therefore we cannot store arrays and objects without converting the object
+    // into a string first. JSON.stringify will convert the object into a JSON string
+    localStorage.setItem("todos", JSON.stringify(list));
+    // add the todos as a dependancy because we want to update
+    // localstorage anytime the todos state changes
+  }, [list]);
+console.log(data)
   return (
     <div>
       <form className="container" onSubmit={handleSubmit} >
@@ -62,7 +68,7 @@ console.log(list)
           <label for="title" class="form-label">
             Title
           </label>
-          <input type="text" class="form-control" id="title" value={data.title} onChange={(e)=>setData({...data,title:e.target.value})} />
+          <input type="text" class="form-control" id="title" value={data} onChange={(e)=>setData(e.target.value)} />
         </div>
         <div class="mb-3">
           <label for="shortDescription" class="form-label">
